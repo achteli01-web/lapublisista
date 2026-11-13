@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Publicista | Marketing Digital, Presencia Web y Publicidad</title>
+  <meta name="description" content="Haz que tu negocio se vea profesional, atraiga clientes locales y reúna toda su información en un solo lugar. Páginas web, Redes Sociales, Anuncios y Google Maps con La Publicista." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              purple: '#6b21a8',      /* Purple 700 */
+              'purple-dark': '#581c87', /* Purple 800 */
+              'purple-deep': '#3b0764', /* Purple 950 */
+              'purple-light': '#f3e8ff',/* Purple 100 */
+              fuchsia: '#a21caf',     /* Fuchsia 700 */
+              amber: '#b45309',       /* Amber 700 */
+              whatsapp: '#25D366',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #faf9fc;
+      color: #1e293b;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body class="selection:bg-purple-600 selection:text-white bg-[#faf9fc] text-slate-800 antialiased">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-purple-900 text-purple-100 text-xs sm:text-sm font-medium py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2">
+    <span class="inline-block text-amber-300">★</span>
+    <span><strong>Súper Promo:</strong> Paquete 5 Todo Incluido por solo <strong>$2,000 MXN</strong></span>
+    <a href="#super-promo" class="underline hover:text-white ml-1 font-semibold">Ver detalles &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo Protagonista -->
+      <a href="#" class="flex items-center gap-3">
+        <img src="logo.png" alt="Logo La Publicista" class="h-11 sm:h-12 w-auto object-contain transition-transform hover:scale-105" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+        <a href="#super-promo" class="hover:text-purple-700 transition-colors">Súper Promo</a>
+        <a href="#servicios" class="hover:text-purple-700 transition-colors">Servicios</a>
+        <a href="#soluciones" class="hover:text-purple-700 transition-colors">Presencia & Google</a>
+        <a href="#precios" class="hover:text-purple-700 transition-colors">Precios</a>
+        <a href="#faq" class="hover:text-purple-700 transition-colors">Preguntas</a>
+      </nav>
+
+      <!-- CTA Nav Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a 
+          href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20hacer%20una%20contratación" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-semibold text-sm shadow-sm transition-all"
+        >
+          <i class="fab fa-whatsapp text-emerald-300 text-base"></i>
+          <span>Contrataciones</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-toggle" aria-label="Abrir menú" class="md:hidden text-slate-700 hover:text-purple-700 p-2 text-xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-3 pb-6 bg-white border-b border-slate-200 space-y-3 shadow-lg">
+      <a href="#super-promo" class="block py-2 text-slate-700 hover:text-purple-700 font-semibold text-sm">Súper Promo</a>
+      <a href="#servicios" class="block py-2 text-slate-700 hover:text-purple-700 font-semibold text-sm">Servicios</a>
+      <a href="#soluciones" class="block py-2 text-slate-700 hover:text-purple-700 font-semibold text-sm">Presencia & Google</a>
+      <a href="#precios" class="block py-2 text-slate-700 hover:text-purple-700 font-semibold text-sm">Lista de Precios</a>
+      <a href="#faq" class="block py-2 text-slate-700 hover:text-purple-700 font-semibold text-sm">Preguntas Frecuentes</a>
+      <a 
+        href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20hacer%20una%20contratación" 
+        target="_blank" 
+        class="w-full mt-2 py-3 px-4 bg-purple-700 hover:bg-purple-800 rounded-xl text-center font-bold text-white flex items-center justify-center gap-2 text-sm shadow-sm"
+      >
+        <i class="fab fa-whatsapp text-emerald-300 text-lg"></i> Contratar por WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: IMAGEN A ANCHO COMPLETO CON TEXTO SOBRE ELLA -->
+  <section class="relative w-full overflow-hidden bg-slate-950 min-h-[520px] sm:min-h-[580px] lg:min-h-[640px] flex items-end sm:items-center">
+    
+    <!-- Imagen de fondo que ocupa todo el ancho -->
+    <div class="absolute inset-0 w-full h-full">
+      <img 
+        src="hero-servicios.png" 
+        alt="Darling La Publicista - Marketing Digital" 
+        class="w-full h-full object-cover object-[center_top] sm:object-[80%_center] lg:object-right" 
+      />
+      <!-- Degradado para dar máxima visibilidad a la foto y contraste nítido al texto -->
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/50 to-transparent sm:bg-gradient-to-r sm:from-slate-950/90 sm:via-slate-950/60 sm:to-transparent"></div>
+    </div>
+
+    <!-- Textos concisos sobre la imagen (sin eyebrows) -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20 w-full">
+      <div class="max-w-xl lg:max-w-2xl space-y-4 sm:space-y-5 text-left">
+        
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          Haz que tu negocio se vea <span class="text-purple-300">profesional</span> y atraiga más clientes.
+        </h1>
+
+        <p class="text-slate-200 text-sm sm:text-base lg:text-lg leading-relaxed font-normal">
+          Páginas web, presencia #1 en Google Maps y anuncios en redes sociales para que te encuentren y vendas todos los días.
+        </p>
+
+        <!-- CTA Directo -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2">
+          <a 
+            href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20hacer%20que%20mi%20negocio%20se%20vea%20profesional%20y%20atraiga%20clientes" 
+            target="_blank" 
+            class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-sm sm:text-base shadow-lg transition-all text-center flex items-center justify-center gap-2.5"
+          >
+            <i class="fab fa-whatsapp text-emerald-300 text-xl"></i>
+            <span>Contratar por WhatsApp</span>
+          </a>
+          <a 
+            href="#super-promo" 
+            class="text-xs sm:text-sm font-semibold text-purple-200 hover:text-white underline py-2 transition-colors"
+          >
+            Ver Súper Promo ($2,000 MXN) &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FRANJA DE BENEFICIOS CLAVE (LIBERA LA FOTO DEL HERO) -->
+  <div class="bg-white border-b border-slate-200 py-3.5 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center sm:justify-between gap-4 text-xs sm:text-sm text-slate-700 font-medium">
+      <div class="flex items-center gap-2">
+        <i class="fas fa-check text-emerald-600"></i>
+        <span>Google Maps #1</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-check text-emerald-600"></i>
+        <span>Páginas Web</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-check text-emerald-600"></i>
+        <span>Trafficking Ads</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-check text-emerald-600"></i>
+        <span>Chatbots 24/7</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUPER PROMO SECTION: PAQUETE 5 -->
+  <section id="super-promo" class="py-16 md:py-24 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+          Súper Promo — <span class="text-purple-700">Paquete 5</span>
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          La solución más completa para impulsar la visibilidad, credibilidad y ventas de tu negocio local.
+        </p>
+      </div>
+
+      <!-- Main Promo Card -->
+      <div class="mt-12 max-w-5xl mx-auto">
+        <div class="rounded-3xl bg-[#faf9fc] border-2 border-purple-200 p-6 sm:p-10 lg:p-12 shadow-sm">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Left: Price & Highlights -->
+            <div class="lg:col-span-5 text-center lg:text-left space-y-5">
+              <div class="space-y-1">
+                <span class="text-slate-500 text-xs uppercase tracking-wider font-semibold block">Inversión Total</span>
+                <div class="flex items-baseline justify-center lg:justify-start gap-2">
+                  <span class="text-5xl sm:text-6xl font-black text-slate-900 tracking-tight">$2,000</span>
+                  <span class="text-xl font-bold text-slate-500">MXN</span>
+                </div>
+              </div>
+
+              <!-- Sponsor De Eventos Card -->
+              <div class="p-4 rounded-xl bg-purple-50 border border-purple-200 text-left space-y-1">
+                <div class="flex items-center gap-2 text-purple-900 font-bold text-sm">
+                  <i class="fas fa-award text-amber-600"></i>
+                  <span>Sponsor de Eventos Incluido</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed font-normal">
+                  Tu negocio en los eventos sociales organizados por <em>La Publicista</em> para darte máxima exposición de marca local.
+                </p>
+              </div>
+
+              <!-- CTA Button -->
+              <div class="pt-2">
+                <a 
+                  href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20contratar%20la%20SUPER%20PROMO%20—%20PAQUETE%205%20de%20$2,000%20MXN" 
+                  target="_blank" 
+                  class="w-full py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base shadow-sm transition-all flex items-center justify-center gap-3 text-center"
+                >
+                  <i class="fab fa-whatsapp text-2xl"></i>
+                  <span>Contratar Paquete 5</span>
+                </a>
+                <p class="text-center text-xs text-slate-500 mt-2 flex items-center justify-center gap-1.5 font-medium">
+                  <i class="fas fa-check text-emerald-600"></i> Trato directo con Darling por WhatsApp
+                </p>
+              </div>
+            </div>
+
+            <!-- Right: What Includes List with Badge -->
+            <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+              
+              <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                <img src="badge-incluye.png" alt="Paquete 5 Incluye" class="h-10 sm:h-12 w-auto object-contain" />
+                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-50 text-purple-700 border border-purple-200">8 Beneficios</span>
+              </div>
+
+              <!-- The 8 Pillars of Paquete 5 -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center mt-0.5">
+                    <i class="fas fa-laptop-code text-xs"></i>
+                  </span>
+                  <div>
+                    <span class="font-bold text-slate-900 block text-xs sm:text-sm">Página web personalizada</span>
+                    <span class="text-xs text-slate-500">Toda tu información clara y lista</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center mt-0.5">
+                    <i class="fas fa-paint-brush text-xs"></i>
+                  </span>
+                  <div>
+                    <span class="font-bold text-slate-900 block text-xs sm:text-sm">Diseño publicitario</span>
+                    <span class="text-xs text-slate-500">Catálogos y volantes de alto impacto</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center mt-0.5">
+                    <i class="fas fa-video text-xs"></i>
+                  </span>
+                  <div>
+                    <span class="font-bold text-slate-900 block text-xs sm:text-sm">Videos promocionales</span>
+                    <span class="text-xs text-slate-500">Formato dinámico para redes sociales</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center mt-0.5">
+                    <i class="fas fa-bullhorn text-xs"></i>
+                  </span>
+                  <div>
+                    <span class="font-bold text-slate-900 block text-xs sm:text-sm">Publicidad en redes</span>
+                    <span class="text-xs text-slate-500">Llega a clientes que buscan tus servicios</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center mt-0.5">
+                    <i class="fas fa-headset text-xs"></i>
+                  </span>
+                  <div>
+                    <span class="font-bold text-slate-900 block text-xs sm:text-sm">Estrategia por Zoom</span>
+                    <span class="text-xs text-slate-500">Sesión 1 a 1 para resolver dudas y vender</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center mt-0.5">
+                    <i class="fas fa-trophy text-xs"></i>
+                  </span>
+                  <div>
+                    <span class="font-bold text-slate-900 block text-xs sm:text-sm">Patrocinio de eventos</span>
+                    <span class="text-xs text-slate-500">Exposición en eventos de La Publicista</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center mt-0.5">
+                    <i class="fas fa-share-nodes text-xs"></i>
+                  </span>
+                  <div>
+                    <span class="font-bold text-slate-900 block text-xs sm:text-sm">Gestión de redes</span>
+                    <span class="text-xs text-slate-500">Publicaciones constantes y organizadas</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center mt-0.5">
+                    <i class="fas fa-comments text-xs"></i>
+                  </span>
+                  <div>
+                    <span class="font-bold text-slate-900 block text-xs sm:text-sm">Atención a clientes</span>
+                    <span class="text-xs text-slate-500">Canales de respuesta listos y ágiles</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICIOS PRINCIPALES -->
+  <section id="servicios" class="py-20 bg-[#faf9fc]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900">
+          Servicios Diseñados para Hacerte Vender
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Estrategias y herramientas digitales probadas para que tu negocio local gane clientes reales y presencia seria.
+        </p>
+      </div>
+
+      <!-- Grid of Services -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- CARD 1: Páginas Web -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col justify-between shadow-sm hover:border-purple-300 hover:shadow-md transition-all">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Páginas Web</h3>
+            <p class="text-purple-700 font-semibold text-xs uppercase tracking-wider">Espacio web profesional y personalizado</p>
+            <ul class="space-y-2.5 text-sm text-slate-600 pt-1">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-emerald-600 mt-1"></i>
+                <span>Información clara, teléfono y catálogo de tu negocio.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-emerald-600 mt-1"></i>
+                <span>Redes y contactos reunidos en un solo lugar.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-emerald-600 mt-1"></i>
+                <span>Accesible 24/7 desde cualquier teléfono celular.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-emerald-600 mt-1"></i>
+                <span>Enlace profesional fácil de compartir en WhatsApp.</span>
+              </li>
+            </ul>
+            <div class="rounded-xl overflow-hidden mt-3 border border-slate-200">
+              <img src="laptop-presencia.png" alt="Diseño de Páginas Web" class="w-full h-40 object-cover object-center" />
+            </div>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20información%20y%20cotizar%20una%20Página%20Web%20personalizada" 
+              target="_blank" 
+              class="w-full py-2.5 px-4 rounded-xl bg-purple-50 hover:bg-purple-700 text-purple-700 hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <span>Cotizar Página Web</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: Video Promocional -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col justify-between shadow-sm hover:border-purple-300 hover:shadow-md transition-all">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl">
+              <i class="fas fa-clapperboard"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Video Promocional</h3>
+            <p class="text-purple-700 font-semibold text-xs uppercase tracking-wider">Contenido audiovisual de impacto</p>
+            <ul class="space-y-2.5 text-sm text-slate-600 pt-1">
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-emerald-600 mt-1"></i>
+                <span><strong>Interactivo:</strong> Diseñado para retener la atención del cliente.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-emerald-600 mt-1"></i>
+                <span><strong>Recreativo:</strong> Dinámico y adaptado a reels y estados.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fas fa-check text-emerald-600 mt-1"></i>
+                <span><strong>Atractivo:</strong> Genera llamadas, mensajes y cotizaciones.</span>
+              </li>
+            </ul>
+            <div class="rounded-xl overflow-hidden mt-3 border border-slate-200">
+              <img src="darling-diseno.png" alt="Diseño de Video" class="w-full h-48 object-cover object-top" />
+            </div>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20cotizar%20un%20Video%20Promocional" 
+              target="_blank" 
+              class="w-full py-2.5 px-4 rounded-xl bg-purple-50 hover:bg-purple-700 text-purple-700 hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <span>Cotizar Video Promocional</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: Diseño Publicitario -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col justify-between shadow-sm hover:border-purple-300 hover:shadow-md transition-all">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Diseño Publicitario</h3>
+            <p class="text-purple-700 font-semibold text-xs uppercase tracking-wider">Material gráfico listo para vender</p>
+            <ul class="space-y-3 text-sm text-slate-600 pt-1">
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-book-open text-purple-600 mt-1"></i>
+                <div>
+                  <strong class="text-slate-900 block">Catálogos Digitales:</strong>
+                  Muestra productos y precios de forma ordenada en PDF o formato interactivo.
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-file-invoice text-purple-600 mt-1"></i>
+                <div>
+                  <strong class="text-slate-900 block">Volantes Digitales (Flyers):</strong>
+                  Piezas listas para estados de WhatsApp, Facebook e historias de Instagram.
+                </div>
+              </li>
+            </ul>
+            <div class="rounded-xl overflow-hidden mt-3 border border-slate-200">
+              <img src="servicios-overview.png" alt="Diseño Publicitario" class="w-full h-40 object-cover object-center" />
+            </div>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20diseño%20publicitario%20(catálogo%20o%20volante%20digital)" 
+              target="_blank" 
+              class="w-full py-2.5 px-4 rounded-xl bg-purple-50 hover:bg-purple-700 text-purple-700 hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <span>Pedir Diseño Publicitario</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 4: Presencia Digital -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col justify-between shadow-sm hover:border-purple-300 hover:shadow-md transition-all">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl">
+              <i class="fas fa-hashtag"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Presencia en Redes</h3>
+            <p class="text-purple-700 font-semibold text-xs uppercase tracking-wider">En las plataformas donde compran tus clientes</p>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <div class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                <i class="fab fa-facebook text-blue-600 text-base"></i>
+                <span class="font-semibold text-slate-800 text-xs">Facebook</span>
+              </div>
+              <div class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                <i class="fab fa-instagram text-pink-600 text-base"></i>
+                <span class="font-semibold text-slate-800 text-xs">Instagram</span>
+              </div>
+              <div class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                <i class="fab fa-tiktok text-slate-900 text-base"></i>
+                <span class="font-semibold text-slate-800 text-xs">TikTok</span>
+              </div>
+              <div class="flex items-center gap-2 p-2.5 rounded-lg bg-slate-50 border border-slate-100">
+                <i class="fab fa-whatsapp text-emerald-600 text-base"></i>
+                <span class="font-semibold text-slate-800 text-xs">WhatsApp</span>
+              </div>
+            </div>
+            <div class="rounded-xl overflow-hidden mt-3 border border-slate-200 bg-slate-50">
+              <img src="badge-social-media.png" alt="Social Media" class="w-full h-32 object-contain" />
+            </div>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20activar%20mi%20Presencia%20Digital" 
+              target="_blank" 
+              class="w-full py-2.5 px-4 rounded-xl bg-purple-50 hover:bg-purple-700 text-purple-700 hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <span>Activar Presencia Digital</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 5: Estrategia Comercial -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col justify-between shadow-sm hover:border-purple-300 hover:shadow-md transition-all">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Estrategia Comercial</h3>
+            <p class="text-purple-700 font-semibold text-xs uppercase tracking-wider">Convierte mensajes en ventas reales</p>
+            <ul class="space-y-3 text-sm text-slate-600 pt-1">
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-bullseye text-purple-600 mt-1"></i>
+                <div>
+                  <strong class="text-slate-900 block">Cierre por WhatsApp:</strong>
+                  Guía paso a paso para contestar mensajes y no perder cotizaciones.
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-filter text-purple-600 mt-1"></i>
+                <div>
+                  <strong class="text-slate-900 block">Atracción & Fidelización:</strong>
+                  Metodología para hacer que tus clientes satisfechos te vuelvan a comprar.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20asesoría%20sobre%20Estrategia%20de%20Ventas" 
+              target="_blank" 
+              class="w-full py-2.5 px-4 rounded-xl bg-purple-50 hover:bg-purple-700 text-purple-700 hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <span>Solicitar Estrategia</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 6: Chatbox Automatizados -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-7 flex flex-col justify-between shadow-sm hover:border-purple-300 hover:shadow-md transition-all">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Chatbox Automatizados</h3>
+            <p class="text-purple-700 font-semibold text-xs uppercase tracking-wider">Atención y respuestas 24/7 sin demora</p>
+            <ul class="space-y-2 text-sm text-slate-600 pt-1">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Responde dudas frecuentes de inmediato.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Agenda citas y pedidos automáticamente.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Filtra prospectos para que atiendas solo a los listos.</span>
+              </li>
+            </ul>
+            <div class="rounded-xl overflow-hidden mt-3 border border-slate-200">
+              <img src="chatbox-ia.png" alt="Generación de ChatBox" class="w-full h-44 object-cover object-center" />
+            </div>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-100">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20implementar%20un%20Chatbox%20Automatizado" 
+              target="_blank" 
+              class="w-full py-2.5 px-4 rounded-xl bg-purple-50 hover:bg-purple-700 text-purple-700 hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <span>Instalar Chatbox</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOLUCIONES DESTACADAS: GOOGLE, TRAFFICKING & CONTENIDO -->
+  <section id="soluciones" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <!-- ITEM 1: GOOGLE MAPS & OPTIMIZACIÓN LOCAL -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Foto Protagonista -->
+        <div class="lg:col-span-6 flex justify-center order-1 lg:order-2">
+          <div class="rounded-3xl overflow-hidden border-2 border-slate-200 shadow-xl hover:shadow-2xl transition-all bg-white w-full max-w-xl">
+            <img src="laptop-presencia.png" alt="Google Maps y Presencia Web" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+        <!-- Texto descriptivo -->
+        <div class="lg:col-span-6 space-y-5 order-2 lg:order-1">
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+            Aparece en los primeros lugares de <span class="text-purple-700">Google Maps</span> en tu zona
+          </h3>
+          <p class="text-slate-600 leading-relaxed text-base">
+            Optimizamos la ficha de tu negocio para que cuando alguien busque tus servicios en tu colonia, alcaldía o municipio, tu empresa aparezca en los primeros 3 resultados con opiniones, fotos y botón directo para llamar.
+          </p>
+          <div class="p-4 rounded-xl bg-purple-50/70 border border-purple-100 space-y-1">
+            <span class="text-sm font-bold text-purple-900 flex items-center gap-2">
+              <i class="fas fa-envelope-open-text text-purple-700"></i> Newsletter & Fidelización:
+            </span>
+            <p class="text-xs text-slate-600">
+              Mensajes y recordatorios para tus clientes que los motivan a regresar y recomendarte con sus conocidos.
+            </p>
+          </div>
+          <div class="pt-2">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20el%20paquete%20de%20Presencia%20Web%20y%20Optimización%20Google%20($2,400%20MXN)" 
+              target="_blank" 
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-sm shadow-sm transition-all"
+            >
+              <i class="fab fa-whatsapp text-emerald-300 text-lg"></i>
+              <span>Contratar Presencia Web ($2,400 MXN)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 2: TRAFFICKING DIGITAL & PUBLICIDAD HIPERLOCAL -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Foto Protagonista -->
+        <div class="lg:col-span-6 order-1 lg:order-1 flex justify-center">
+          <div class="rounded-3xl overflow-hidden border-2 border-slate-200 shadow-xl hover:shadow-2xl transition-all bg-white w-full max-w-xl">
+            <img src="admin-redes.png" alt="Trafficking Digital y Anuncios" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+        <!-- Texto descriptivo -->
+        <div class="lg:col-span-6 order-2 lg:order-2 space-y-5">
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+            Trafficking Digital: Anuncios que traen clientes reales
+          </h3>
+          <p class="text-slate-600 leading-relaxed text-base">
+            Creamos, gestionamos y optimizamos campañas en la red social ideal para tu negocio. Diseñamos la segmentación exacta para que cada peso invertido se transforme en llamadas y mensajes de personas listas para comprar.
+          </p>
+          <div class="p-4 rounded-xl bg-purple-50/70 border border-purple-100 space-y-1">
+            <span class="text-sm font-bold text-purple-900 flex items-center gap-2">
+              <i class="fas fa-users-rays text-purple-700"></i> Difusión Hiperlocal:
+            </span>
+            <p class="text-xs text-slate-600">
+              Promovemos tu negocio en los grupos locales más activos de WhatsApp y Facebook para generar tracción inmediata.
+            </p>
+          </div>
+          <div class="pt-2">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20contratar%20Trafficking%20Digital%20($4,000%20MXN)" 
+              target="_blank" 
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-sm shadow-sm transition-all"
+            >
+              <i class="fab fa-whatsapp text-emerald-300 text-lg"></i>
+              <span>Contratar Trafficking ($4,000 MXN)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 3: CREACIÓN DE CONTENIDO PROFESIONAL -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <!-- Foto Protagonista -->
+        <div class="lg:col-span-6 flex justify-center order-1 lg:order-2">
+          <div class="rounded-3xl overflow-hidden border-2 border-slate-200 shadow-xl hover:shadow-2xl transition-all bg-white w-full max-w-xl">
+            <img src="creacion-contenido.png" alt="Creación de Contenido La Publicista" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+        <!-- Texto descriptivo -->
+        <div class="lg:col-span-6 space-y-5 order-2 lg:order-1">
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+            Contenido que genera <span class="text-purple-700">confianza y autoridad</span>
+          </h3>
+          <p class="text-slate-600 leading-relaxed text-base">
+            Creamos todo el contenido que tu negocio necesita para verse profesional en internet: videos, fotografías y textos persuasivos listos para tus redes y anuncios publicitarios.
+          </p>
+          <div class="grid grid-cols-2 gap-3 text-xs text-slate-700 font-medium">
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
+              <i class="fas fa-video text-purple-700"></i>
+              <span>Reels y TikToks dinámicos</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
+              <i class="fas fa-image text-purple-700"></i>
+              <span>Diseños con tu identidad</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
+              <i class="fas fa-pen-fancy text-purple-700"></i>
+              <span>Textos de venta claros</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
+              <i class="fas fa-calendar-check text-emerald-600"></i>
+              <span>Calendario ordenado</span>
+            </div>
+          </div>
+          <div class="pt-2">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20información%20sobre%20Creación%20de%20Contenido" 
+              target="_blank" 
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-sm shadow-sm transition-all"
+            >
+              <i class="fab fa-whatsapp text-emerald-300 text-lg"></i>
+              <span>Cotizar Creación de Contenido</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABLA DE PRECIOS & PAQUETES (TRANSPARENTE Y CLARA) -->
+  <section id="precios" class="py-20 bg-[#faf9fc]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900">
+          Planes y Servicios Individuales
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Sin cargos ocultos ni letras chiquitas. Elige el servicio ideal para las necesidades de tu empresa.
+        </p>
+      </div>
+
+      <!-- PAQUETES PRINCIPALES (GRID 3 COLUMNAS) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">
+        
+        <!-- CARD 1: Presencia Web -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div class="space-y-4">
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold uppercase rounded-md inline-block">
+              Base Digital
+            </span>
+            <h3 class="text-2xl font-bold text-slate-900">Presencia Web</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl font-extrabold text-slate-900">$2,400</span>
+              <span class="text-sm font-semibold text-slate-500">MXN</span>
+            </div>
+            <p class="text-xs text-slate-600">Ideal para negocios que buscan ser encontrados en Google Maps y comunicarse con sus clientes.</p>
+            
+            <div class="pt-4 border-t border-slate-100 space-y-3 text-sm text-slate-700">
+              <div class="flex items-start gap-2.5">
+                <i class="fas fa-check text-emerald-600 mt-1"></i>
+                <span><strong>Optimización Google:</strong> Ficha de Google Maps configurada para destacar en tu zona.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i class="fas fa-check text-emerald-600 mt-1"></i>
+                <span><strong>Newsletter:</strong> Mensajes y recordatorios para activar ventas recurrentes.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20contratar%20el%20paquete%20de%20Presencia%20Web%20($2,400%20MXN)" 
+              target="_blank" 
+              class="w-full py-3.5 px-4 rounded-xl bg-purple-50 hover:bg-purple-700 text-purple-700 hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>Contratar ($2,400 MXN)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: SUPER PROMO 5 (FEATURED) -->
+        <div class="bg-white rounded-3xl p-8 border-2 border-purple-600 shadow-xl relative flex flex-col justify-between transform md:-translate-y-3">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-purple-700 text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-sm">
+            Opción Más Completa
+          </div>
+
+          <div class="space-y-4 pt-2">
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-bold uppercase rounded-md inline-block">
+              Súper Promo
+            </span>
+            <h3 class="text-2xl font-bold text-slate-900">Paquete 5 Completo</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl sm:text-5xl font-black text-purple-900">$2,000</span>
+              <span class="text-sm font-semibold text-slate-500">MXN</span>
+            </div>
+            <p class="text-xs text-purple-800 font-medium">Incluye patrocinio en eventos organizados por La Publicista.</p>
+
+            <div class="pt-4 border-t border-purple-100 space-y-2 text-xs text-slate-700">
+              <div class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Página web personalizada</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Diseño publicitario & catálogos</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Videos promocionales atractivos</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Publicidad en redes sociales</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Estrategia de ventas por Zoom</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Patrocinio de eventos sociales</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-check text-emerald-600"></i>
+                <span>Gestión de redes y atención</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20aprovechar%20la%20SUPER%20PROMO%20—%20PAQUETE%205%20($2,000%20MXN)" 
+              target="_blank" 
+              class="w-full py-4 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-sm transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <i class="fab fa-whatsapp text-lg"></i>
+              <span>Contratar Paquete 5</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: Trafficking -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div class="space-y-4">
+            <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold uppercase rounded-md inline-block">
+              Máxima Conversión
+            </span>
+            <h3 class="text-2xl font-bold text-slate-900">Trafficking Digital</h3>
+            <div class="flex items-baseline gap-2">
+              <span class="text-4xl font-extrabold text-slate-900">$4,000</span>
+              <span class="text-sm font-semibold text-slate-500">MXN</span>
+            </div>
+            <p class="text-xs text-slate-600">Pauta pagada profesional para captar prospectos todos los días en la red social ideal.</p>
+
+            <div class="pt-4 border-t border-slate-100 space-y-2 text-xs text-slate-700">
+              <div class="flex items-center gap-2">
+                <i class="fab fa-facebook text-blue-600 text-sm"></i>
+                <span>Trafficking en Facebook</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fab fa-instagram text-pink-600 text-sm"></i>
+                <span>Trafficking en Instagram</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fab fa-whatsapp text-emerald-600 text-sm"></i>
+                <span>Trafficking en WhatsApp</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fab fa-tiktok text-slate-900 text-sm"></i>
+                <span>Trafficking en TikTok</span>
+              </div>
+              <p class="text-xs text-slate-500 pt-1 font-medium">Incluye segmentación, diseño de creativos y optimización de presupuesto.</p>
+            </div>
+          </div>
+
+          <div class="pt-8">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20contratar%20el%20servicio%20de%20Trafficking%20Digital%20($4,000%20MXN)" 
+              target="_blank" 
+              class="w-full py-3.5 px-4 rounded-xl bg-purple-50 hover:bg-purple-700 text-purple-700 hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 text-center"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>Contratar ($4,000 MXN)</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GESTIÓN DE PRESENCIA DIGITAL & SERVICIOS A LA CARTA -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Gestión de Presencia Digital (1,200 c/u) -->
+        <div class="lg:col-span-6 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-xs font-bold text-purple-700 uppercase tracking-wider block">Mantenimiento Mensual</span>
+              <h3 class="text-2xl font-bold text-slate-900">Gestión de Presencia Digital</h3>
+            </div>
+            <div class="text-right">
+              <span class="text-2xl sm:text-3xl font-black text-slate-900">$1,200</span>
+              <span class="text-xs block text-slate-500 font-medium">MXN C/U</span>
+            </div>
+          </div>
+
+          <p class="text-sm text-slate-600">
+            Administración profesional por red social. Nos encargamos de mantener activas tus cuentas, responder y proyectar una imagen sólida.
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20me%20interesa%20la%20Gestión%20de%20Facebook%20($1,200%20MXN)" 
+              target="_blank" 
+              class="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-purple-300 transition-all flex items-center justify-between group"
+            >
+              <span class="flex items-center gap-2 font-semibold text-slate-800">
+                <i class="fab fa-facebook text-blue-600 text-sm"></i> Facebook
+              </span>
+              <span class="text-purple-700 group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </a>
+
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20me%20interesa%20la%20Gestión%20de%20Instagram%20($1,200%20MXN)" 
+              target="_blank" 
+              class="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-purple-300 transition-all flex items-center justify-between group"
+            >
+              <span class="flex items-center gap-2 font-semibold text-slate-800">
+                <i class="fab fa-instagram text-pink-600 text-sm"></i> Instagram
+              </span>
+              <span class="text-purple-700 group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </a>
+
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20me%20interesa%20la%20Gestión%20de%20TikTok%20($1,200%20MXN)" 
+              target="_blank" 
+              class="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-purple-300 transition-all flex items-center justify-between group"
+            >
+              <span class="flex items-center gap-2 font-semibold text-slate-800">
+                <i class="fab fa-tiktok text-slate-900 text-sm"></i> TikTok
+              </span>
+              <span class="text-purple-700 group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </a>
+
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20me%20interesa%20la%20Gestión%20de%20WhatsApp%20($1,200%20MXN)" 
+              target="_blank" 
+              class="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-purple-300 transition-all flex items-center justify-between group"
+            >
+              <span class="flex items-center gap-2 font-semibold text-slate-800">
+                <i class="fab fa-whatsapp text-emerald-600 text-sm"></i> WhatsApp
+              </span>
+              <span class="text-purple-700 group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </a>
+          </div>
+
+          <a 
+            href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20contratar%20la%20Gestión%20de%20mis%20Redes%20Sociales" 
+            target="_blank" 
+            class="block w-full py-3 text-center bg-purple-700 hover:bg-purple-800 rounded-xl font-bold text-white text-sm transition-all"
+          >
+            Contratar Gestión de Redes
+          </a>
+        </div>
+
+        <!-- Right: Publicidad Hiperlocal & Piezas Individuales -->
+        <div class="lg:col-span-6 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6 shadow-sm">
+          <div class="flex items-center justify-between">
+            <div>
+              <span class="text-xs font-bold text-purple-700 uppercase tracking-wider block">Servicios a la Carta</span>
+              <h3 class="text-2xl font-bold text-slate-900">Publicidad & Piezas Sueltas</h3>
+            </div>
+            <span class="text-xs px-2.5 py-1 bg-purple-50 text-purple-800 font-semibold rounded-md border border-purple-200">
+              Desde $200 MXN
+            </span>
+          </div>
+
+          <p class="text-sm text-slate-600">
+            ¿Necesitas una pieza específica para tu difusión o campaña? Elige exactamente el material que te hace falta:
+          </p>
+
+          <div class="space-y-2.5">
+            <!-- Item 1 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fab fa-facebook-square text-blue-600 text-lg"></i>
+                <span class="text-xs sm:text-sm font-medium text-slate-800">Publicidad en Grupos de Facebook</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-slate-900 text-sm">$300 MXN</span>
+                <a href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20Publicidad%20en%20Grupos%20de%20Facebook%20($300%20MXN)" target="_blank" class="px-3 py-1 bg-purple-700 hover:bg-purple-800 rounded-lg text-white text-xs font-bold transition-colors">Pedir</a>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fab fa-whatsapp-square text-emerald-600 text-lg"></i>
+                <span class="text-xs sm:text-sm font-medium text-slate-800">Publicidad en Grupos de WhatsApp</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-slate-900 text-sm">$300 MXN</span>
+                <a href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20Publicidad%20en%20Grupos%20de%20WhatsApp%20($300%20MXN)" target="_blank" class="px-3 py-1 bg-purple-700 hover:bg-purple-800 rounded-lg text-white text-xs font-bold transition-colors">Pedir</a>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-file-code text-indigo-600 text-lg"></i>
+                <span class="text-xs sm:text-sm font-medium text-slate-800">Web Listing Page</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-slate-900 text-sm">$500 MXN</span>
+                <a href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20contratar%20una%20Web%20Listing%20Page%20($500%20MXN)" target="_blank" class="px-3 py-1 bg-purple-700 hover:bg-purple-800 rounded-lg text-white text-xs font-bold transition-colors">Pedir</a>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-video text-purple-700 text-lg"></i>
+                <span class="text-xs sm:text-sm font-medium text-slate-800">Diseño Video Promocional</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-slate-900 text-sm">$200 MXN</span>
+                <a href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20Diseño%20de%20Video%20Promocional%20($200%20MXN)" target="_blank" class="px-3 py-1 bg-purple-700 hover:bg-purple-800 rounded-lg text-white text-xs font-bold transition-colors">Pedir</a>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-book-open text-purple-700 text-lg"></i>
+                <span class="text-xs sm:text-sm font-medium text-slate-800">Catálogo digital para Redes</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-slate-900 text-sm">$200 MXN</span>
+                <a href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20un%20Catálogo%20digital%20para%20Redes%20Sociales%20($200%20MXN)" target="_blank" class="px-3 py-1 bg-purple-700 hover:bg-purple-800 rounded-lg text-white text-xs font-bold transition-colors">Pedir</a>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-ticket text-purple-700 text-lg"></i>
+                <span class="text-xs sm:text-sm font-medium text-slate-800">Volante digital para Redes</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-slate-900 text-sm">$300 MXN</span>
+                <a href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20un%20Volante%20digital%20para%20Redes%20Sociales%20($300%20MXN)" target="_blank" class="px-3 py-1 bg-purple-700 hover:bg-purple-800 rounded-lg text-white text-xs font-bold transition-colors">Pedir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POR QUÉ ELEGIR LA PUBLICISTA -->
+  <section class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Foto de Servicios Protagonista -->
+        <div class="lg:col-span-5 flex justify-center order-1 lg:order-1">
+          <div class="relative max-w-md lg:max-w-lg w-full rounded-3xl overflow-hidden border-2 border-slate-200 shadow-xl hover:shadow-2xl transition-all">
+            <img src="servicios-overview.png" alt="Resumen de Servicios La Publicista" class="w-full h-auto object-cover" />
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 order-2 lg:order-2">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+            ¿Por qué los negocios eligen trabajar con <span class="text-purple-700">La Publicista</span>?
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed">
+            No somos una agencia distante que te entrega diseños vacíos. Nos enfocamos en darte <strong>visibilidad real, profesionalismo absoluto y clientes</strong> que llamen a tu puerta o escriban a tu WhatsApp.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">
+                1
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Toda tu información en un solo enlace</h4>
+                <p class="text-xs text-slate-600">Tus clientes encuentran tu menú, catálogo, ubicación, horarios y redes en un enlace limpio sin perderse.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">
+                2
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Posicionamiento Local Inmediato</h4>
+                <p class="text-xs text-slate-600">Apareces en Google Maps y grupos de la comunidad donde los vecinos buscan activamente lo que ofreces.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">
+                3
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm">Atención directa y personalizada</h4>
+                <p class="text-xs text-slate-600">Trato directo con Darling La Publicista por WhatsApp, con acompañamiento real en cada paso de tu proyecto.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <a 
+              href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20platicar%20sobre%20mi%20negocio%20y%20conocer%20la%20mejor%20opción" 
+              target="_blank" 
+              class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-purple-700 hover:bg-purple-800 text-white font-bold text-base transition-all shadow-sm"
+            >
+              <i class="fab fa-whatsapp text-emerald-300 text-xl"></i>
+              <span>Hablar con Darling por WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES (FAQ) -->
+  <section id="faq" class="py-20 bg-[#faf9fc]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+          Preguntas Frecuentes
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Todo lo que necesitas saber antes de comenzar a trabajar juntos.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:border-purple-300 open:shadow-sm transition-all cursor-pointer">
+          <summary class="flex justify-between items-center font-bold text-slate-900 list-none text-base">
+            <span>¿Cómo se realiza el proceso de contratación?</span>
+            <span class="text-purple-700 transition-transform group-open:rotate-180">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+            Solo haz clic en cualquiera de los botones de contratación o escribe directamente a nuestro WhatsApp (+52 56 4338 1893). Te confirmaremos el servicio o paquete que te interesa, coordinaremos la información de tu negocio y comenzaremos de inmediato.
+          </p>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:border-purple-300 open:shadow-sm transition-all cursor-pointer">
+          <summary class="flex justify-between items-center font-bold text-slate-900 list-none text-base">
+            <span>¿En cuánto tiempo quedan listos mis materiales y página web?</span>
+            <span class="text-purple-700 transition-transform group-open:rotate-180">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+            Una vez que nos compartas la información y fotos de tu negocio, los volantes y publicaciones se entregan en un lapso de 24 a 48 horas hábiles, y las páginas web personalizadas quedan en línea en un promedio de 3 a 5 días hábiles.
+          </p>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:border-purple-300 open:shadow-sm transition-all cursor-pointer">
+          <summary class="flex justify-between items-center font-bold text-slate-900 list-none text-base">
+            <span>¿Qué incluye el beneficio de 'Sponsor de Eventos'?</span>
+            <span class="text-purple-700 transition-transform group-open:rotate-180">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+            Al contratar el Paquete 5, tu marca y logotipo se integran como patrocinador en los eventos y reuniones sociales organizados por La Publicista, logrando menciones, presencia en banners y exposición ante prospectos calificados.
+          </p>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white border border-slate-200 rounded-2xl p-6 open:border-purple-300 open:shadow-sm transition-all cursor-pointer">
+          <summary class="flex justify-between items-center font-bold text-slate-900 list-none text-base">
+            <span>¿Qué métodos de pago aceptan?</span>
+            <span class="text-purple-700 transition-transform group-open:rotate-180">
+              <i class="fas fa-chevron-down"></i>
+            </span>
+          </summary>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+            Aceptamos transferencias bancarias (SPEI), depósitos en OXXO y pagos digitales para tu total comodidad y seguridad.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BANNER FINAL DE CONTRATACIÓN -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="rounded-3xl bg-purple-900 text-white p-8 sm:p-12 text-center space-y-6 shadow-lg">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+        ¿Listo para que tu negocio sea el referente de tu zona?
+      </h2>
+      <p class="text-purple-200 text-base sm:text-lg max-w-2xl mx-auto font-normal">
+        No dejes que tu competencia se quede con los clientes locales. Haz que tu negocio se vea profesional, visible y confiable hoy mismo.
+      </p>
+      <div class="pt-2">
+        <a 
+          href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20estoy%20listo%20para%20iniciar%20la%20contratación" 
+          target="_blank" 
+          class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base sm:text-lg shadow-md transition-all"
+        >
+          <i class="fab fa-whatsapp text-2xl"></i>
+          <span>Contratar por WhatsApp: 56 4338 1893</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-10 text-slate-600 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="La Publicista" class="h-9 w-auto object-contain" />
+        <div>
+          <p class="text-slate-900 font-bold text-sm">La Publicista</p>
+          <p class="text-slate-500">Marketing Digital, Redes Sociales y Páginas Web</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 text-slate-500 text-lg">
+        <a href="https://wa.me/525643381893" target="_blank" aria-label="WhatsApp" class="hover:text-emerald-600 transition-colors"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="hover:text-blue-600 transition-colors"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="hover:text-pink-600 transition-colors"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank" aria-label="TikTok" class="hover:text-slate-900 transition-colors"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <div class="text-center sm:text-right">
+        <p>&copy; <span id="year"></span> La Publicista. Todos los derechos reservados.</p>
+        <p class="text-slate-500 mt-1">Darling La Publicista • Contrataciones: +52 56 4338 1893</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON (ERGONÓMICO Y NO INVASIVO) -->
+  <div class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40">
+    <a 
+      href="https://wa.me/525643381893?text=Hola%20La%20Publicista,%20quiero%20información%20y%20contratar" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      aria-label="Contrataciones por WhatsApp"
+      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center text-xl sm:text-2xl shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- SCRIPT FOR DYNAMIC YEAR & MOBILE TOGGLE -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
